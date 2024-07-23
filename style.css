@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+  }
+  
+  .container {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 25vh;
+  }
+  .button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Edit {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task {
+    width: 50%;
+    height: 25px;
+    border: none;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  h1 {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0%;
+  }
+  
+  li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .delete-btn,
+  .edit-btn,
+  .start-btn,
+  .done-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: rgba(255, 213, 0, 0.932);
+  }
+  
+  .start-btn {
+    background-color: #ffbf00;
+  }
+  
+  .done-btn {
+    background-color: rgb(47, 176, 47);
+  }
+  
+  .actions {
+    display: flex;
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .task-item {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .status {
+    position: relative; /* Required for pseudo-element positioning */
+    padding-left: 20px; /* Space for the circle */
+    font-size: 16px;
+  }
+  
+  .status.to-do::before {
+    content: ""; /* Creates an empty element */
+    width: 10px; /* Diameter of the circle */
+    height: 10px; /* Diameter of the circle */
+    background-color: red; /* Color of the circle */
+    border-radius: 50%; /* Makes the element a circle */
+    position: absolute; /* Allows positioning relative to the .status element */
+    left: 0; /* Positions the circle to the left of the text */
+    top: 50%; /* Vertically centers the circle */
+    transform: translateY(-50%); /* Adjusts for the circle's height */
+  }
+  
+  .status.pending::before {
+    content: ""; /* Creates an empty element */
+    width: 10px; /* Diameter of the circle */
+    height: 10px; /* Diameter of the circle */
+    background-color: #ffbf00; /* Color of the circle */
+    border-radius: 50%; /* Makes the element a circle */
+    position: absolute; /* Allows positioning relative to the .status element */
+    left: 0; /* Positions the circle to the left of the text */
+    top: 50%; /* Vertically centers the circle */
+    transform: translateY(-50%); /
+  }
+  
+  .status.done::before {
+    content: ""; /* Creates an empty element */
+    width: 10px; /* Diameter of the circle */
+    height: 10px; /* Diameter of the circle */
+    background-color: rgb(
+      47,
+      176,
+      47
+    ); /* Color of the circle */
+    border-radius: 50%; /* Makes the element a circle */
+    position: absolute; /* Allows positioning relative to the .status element */
+    left: 0; /* Positions the circle to the left of the text */
+    top: 50%; /* Vertically centers the circle */
+    transform: translateY(-50%);
+  }
+  
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(228, 137, 137);
+    color: white;
+  }
